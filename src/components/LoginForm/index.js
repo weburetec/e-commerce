@@ -36,7 +36,9 @@ class LoginForm extends Component {
   submitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
-    const userDetails = {username, password}
+
+    // dummy api call //
+    const userDetails = {username: 'rahul', password: 'rahul@2021'}
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -44,10 +46,13 @@ class LoginForm extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    if (response.ok === true) {
-      this.onSubmitSuccess(data.jwt_token)
+    // dummy api call //
+
+    if (username === 'webure' && password === 'password') {
+      /* temporary credentials */
+      this.onSubmitSuccess(data.jwt_token) /* dummy token */
     } else {
-      this.onSubmitFailure(data.error_msg)
+      this.onSubmitFailure('Wrong User Credentials')
     }
   }
 
@@ -98,7 +103,7 @@ class LoginForm extends Component {
     return (
       <div className="login-form-container">
         <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+          src="https://res.cloudinary.com/student-sudheer/image/upload/v1624961927/covid-19/e-logo_gfogco.webp"
           className="login-website-logo-mobile-image"
           alt="website logo"
         />
@@ -109,7 +114,7 @@ class LoginForm extends Component {
         />
         <form className="form-container" onSubmit={this.submitForm}>
           <img
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+            src="https://res.cloudinary.com/student-sudheer/image/upload/v1624961927/covid-19/e-logo_gfogco.webp"
             className="login-website-logo-desktop-image"
             alt="website logo"
           />

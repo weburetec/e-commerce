@@ -17,10 +17,19 @@ const Header = props => {
         <div className="nav-bar-mobile-logo-container">
           <img
             className="website-logo"
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+            src="https://res.cloudinary.com/student-sudheer/image/upload/v1624961927/covid-19/e-logo_gfogco.webp"
             alt="website logo"
           />
-
+          <div className="search-container">
+            <input
+              type="search"
+              placeholder="Search Products"
+              className="header-search"
+            />
+            <i className="fas fa-search search-icon" aria-hidden="true">
+              {' '}
+            </i>
+          </div>
           <button type="button" className="nav-mobile-btn">
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
@@ -34,24 +43,37 @@ const Header = props => {
         <div className="nav-bar-large-container">
           <img
             className="website-logo"
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+            src="https://res.cloudinary.com/student-sudheer/image/upload/v1624961927/covid-19/e-logo_gfogco.webp"
             alt="website logo"
           />
+          <div className="search-container">
+            <input
+              type="search"
+              placeholder="Search Products"
+              className="header-search"
+            />
+            <i className="fas fa-search search-icon" aria-hidden="true">
+              {' '}
+            </i>
+          </div>
           <ul className="nav-menu">
             <li className="nav-menu-item">
               <Link to="/" className="nav-link">
+                <i className="fas fa-home"> </i>
                 Home
               </Link>
             </li>
 
             <li className="nav-menu-item">
               <Link to="/products" className="nav-link">
+                <i className="fas fa-shopping-bag"> </i>
                 Products
               </Link>
             </li>
 
             <li className="nav-menu-item">
               <Link to="/cart" className="nav-link">
+                <i className="fas fa-shopping-cart"> </i>
                 Cart
               </Link>
             </li>
